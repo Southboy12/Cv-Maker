@@ -1,17 +1,14 @@
-import { useState } from "react"
-
-
-export default function Contact() {
+export default function Contact({ handleChange, contactInfo, isVisible, onToggle }) {
     
-    const [isVisible, setIsVisible] = useState(false)
+    // const [isVisible, setIsVisible] = useState(false)
 
-    function handleContactClick() {
-        setIsVisible(!isVisible)
-    }
+    // function handleContactClick() {
+    //     setIsVisible(!isVisible)
+    // }
 
     return (
         <div className="btn--container">
-            <button className="option--button" onClick={handleContactClick}>
+            <button className="option--button" onClick={onToggle}>
                 <h2>Contact</h2>
                 <img src="data:image/svg+xml,%3csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%2024%2024'%3e%3cpath%20d='M7,10L12,15L17,10H7Z'%20/%3e%3c/svg%3e" alt="dropdown icon" />
             </button>
@@ -19,22 +16,22 @@ export default function Contact() {
                 <form>
                     <div className="my--input">
                         <label htmlFor="fullName">Name</label>
-                        <input type="text" id="fullName" name="fullName" />
+                        <input type="text" id="fullname" name="fullname" value={contactInfo.fullname} onChange={handleChange} />
                     </div>
                     
                     <div className="my--input">
                         <label htmlFor="email">Email</label>
-                        <input type="email" id="email" name="email" />
+                        <input type="email" id="email" name="email" value={contactInfo.email} onChange={handleChange} />
                     </div>
                     
                     <div className="my--input">
-                        <label htmlFor="phoneNumber">Phone</label>
-                        <input type="number" id="phoneNumber" name="phone_number" />
+                        <label htmlFor="phone">Phone</label>
+                        <input type="tel" id="phone" pattern="\+?[0-9\s\-\(\)]*" name="phone" value={contactInfo.phone} onChange={handleChange} />
                     </div>
 
                     <div className="my--input">
                         <label htmlFor="address">Address</label>
-                        <input type="text" id="address" name="address" />
+                        <input type="text" id="address" name="address" value={contactInfo.address} onChange={handleChange} />
                     </div>
 
                 </form>
