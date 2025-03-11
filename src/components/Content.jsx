@@ -1,10 +1,10 @@
-export default function Content() {
+export default function Content({ contactInfo }) {
     return (
         <main className="main--content">
             <section className="header--info">
-                <h1>Solomon Chikwendu</h1>
-                <p>(555)-320-2456 | itz_ya_boi_jj3@gmail.com</p>
-                <p>748 Westinghouse Blvd. Columbus, OH 43085</p>
+                <h1>{contactInfo.fullname}</h1>
+                <p>{contactInfo.phone} | {contactInfo.email}</p>
+                <p>{contactInfo.address}</p>
             </section>
 
             <section className="education--info">
