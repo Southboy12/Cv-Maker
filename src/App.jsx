@@ -18,10 +18,10 @@ function App() {
 
   const [activeIndex, setActiveIndex] = useState(null)
   const [resumeInfo, setResumeInfo] = useState({
-    fullname: "Solomon Chikwendu",
+    fullname: "Southboy Menka",
     email: "menkachi85@gmail.com",
     phone: "+2348066264685",
-    address: "4 Freedom Street Olodi Apapa Lagos",
+    address: "5 Admiralty Way Lekki Phase 1, Lagos",
     school: "Federal University of Technology Owerri",
     degree: "Bachelors of Science",
     date: "2013-05",
