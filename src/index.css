@@ -240,7 +240,7 @@ b, i {
     justify-content: space-between;
     max-width: 100%;
     gap: 10px;
-    /* border: 1px solid red; */
+    margin-top: 3rem;
 }
 
 .reset--container > div {
