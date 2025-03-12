@@ -1,5 +1,5 @@
-export default function Reset() {
+export default function Reset({ handleReset }) {
     return (
-        <div className="reset--btn">reset</div>
+        <button className="reset--btn" onClick={handleReset}>Reset</button>
     )
 }

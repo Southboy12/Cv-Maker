@@ -1,5 +1,5 @@
-export default function Download() {
+export default function Download({ handleDownload }) {
     return (
-        <div className="download--btn">Download</div>
+        <button className="download--btn" onClick={handleDownload}>Download</button>
     )
 }

@@ -1,13 +1,6 @@
-// import { useState } from "react"
+// import { useEffect } from "react";
 
-
-export default function Format({isVisible, onToggle}) {
-
-//    const [isVisible, setIsVisible] = useState(false)
-   
-//        function handleFormatClick() {
-//            setIsVisible(!isVisible)
-//        }
+export default function Format({ handleChange, resumeInfo, isVisible, onToggle}) {
 
     return (
         <div className="btn--container">
@@ -19,7 +12,7 @@ export default function Format({isVisible, onToggle}) {
                 <form>
                     <div className="my--input">
                         <label htmlFor="font">Font</label>
-                        <select name="" id="font">
+                        <select name="fontFamily" id="font" value={resumeInfo.fontFamily} onChange={handleChange}>
                             <option value="arial">Arial</option>
                             <option value="inter">Inter</option>
                             <option value="tahoma">Tahoma</option>

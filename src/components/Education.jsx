@@ -1,7 +1,4 @@
-// import { useState } from "react"
-
-
-export default function Education({isVisible, onToggle}) {
+export default function Education({ resumeInfo, handleChange, isVisible, onToggle }) {
 
     //  const [isVisible, setIsVisible] = useState(false)
     
@@ -19,17 +16,17 @@ export default function Education({isVisible, onToggle}) {
                 <form>
                     <div className="my--input">
                         <label htmlFor="school">School</label>
-                        <input type="text" id="school" />
+                        <input type="text" id="school" name="school" value={resumeInfo.school} onChange={handleChange} />
                     </div>
                     
                     <div className="my--input">
                         <label htmlFor="degree">Degree</label>
-                        <input type="text" id="degree" />
+                        <input type="text" id="degree" name="degree" value={resumeInfo.degree} onChange={handleChange} />
                     </div>
                     
                     <div className="my--input">
-                        <label htmlFor="phoneNumber">Date</label>
-                        <input type="date" id="date" />
+                        <label htmlFor="date">Date</label>
+                        <input type="month" id="date" name="date" value={resumeInfo.date} onChange={handleChange} />
                     </div>
 
                 </form>

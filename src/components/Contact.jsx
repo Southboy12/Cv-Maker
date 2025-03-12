@@ -1,4 +1,4 @@
-export default function Contact({ handleChange, contactInfo, isVisible, onToggle }) {
+export default function Contact({ handleChange, resumeInfo, isVisible, onToggle }) {
     
     // const [isVisible, setIsVisible] = useState(false)
 
@@ -16,22 +16,22 @@ export default function Contact({ handleChange, contactInfo, isVisible, onToggle
                 <form>
                     <div className="my--input">
                         <label htmlFor="fullName">Name</label>
-                        <input type="text" id="fullname" name="fullname" value={contactInfo.fullname} onChange={handleChange} />
+                        <input type="text" id="fullname" name="fullname" value={resumeInfo.fullname} onChange={handleChange} />
                     </div>
                     
                     <div className="my--input">
                         <label htmlFor="email">Email</label>
-                        <input type="email" id="email" name="email" value={contactInfo.email} onChange={handleChange} />
+                        <input type="email" id="email" name="email" value={resumeInfo.email} onChange={handleChange} />
                     </div>
                     
                     <div className="my--input">
                         <label htmlFor="phone">Phone</label>
-                        <input type="tel" id="phone" pattern="\+?[0-9\s\-\(\)]*" name="phone" value={contactInfo.phone} onChange={handleChange} />
+                        <input type="tel" id="phone" pattern="\+?[0-9\s\-\(\)]*" name="phone" value={resumeInfo.phone} onChange={handleChange} />
                     </div>
 
                     <div className="my--input">
                         <label htmlFor="address">Address</label>
-                        <input type="text" id="address" name="address" value={contactInfo.address} onChange={handleChange} />
+                        <input type="text" id="address" name="address" value={resumeInfo.address} onChange={handleChange} />
                     </div>
 
                 </form>
